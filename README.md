@@ -51,6 +51,32 @@ A análise integra a perspectiva financeira (**Curva ABC**) com a criticidade op
 
 ---
 
+## 🤖 Módulo de Automação de Decisões e Alertas Operacionais (TO-BE)
+
+Para transformar a análise estática em um **sistema ativo de recomendação**, o modelo em Python simula o saldo de estoque físico em tempo real (integração via ERP/WMS) e executa regramentos automáticos de negócio:
+
+### 🚨 Painel Executivo de Alertas e Ordens Sugeridas
+
+| Código SKU | Item MRO | Matriz | Estoque Atual | ROP | Status do Alerta | Qtd. Sugerida | Estratégia de Fornecedor | Revisão ROP |
+| :--- | :--- | :---: | :---: | :---: | :--- | :---: | :--- | :---: |
+| **SKU-105** | Sensor Vibração | **BZ** | 1 un | 2 un | 🚨 **URGENTE: RISCO RUPTURA** | 3 un | Contrato VMI / Consignado | Trimestral |
+| **SKU-103** | Eixo Transmissão | **AZ** | 2 un | 3 un | ⚠️ **EMITIR ORDEM COMPRA** | 4 un | Contrato VMI / Consignado | Mensal |
+| **SKU-101** | Anel de Vedação | **CX** | 30 un | 36 un | ⚠️ **EMITIR ORDEM COMPRA** | 42 un | Compra por Lote / Cartão | Semestral |
+| **SKU-106** | Porcas/Parafusos | **CX** | 90 un | 104 un | ⚠️ **EMITIR ORDEM COMPRA** | 118 un | Compra por Lote / Cartão | Semestral |
+| **SKU-102** | Válvula Flangeada | **AZ** | 8 un | 9 un | ⚠️ **EMITIR ORDEM COMPRA** | 10 un | Contrato VMI / Consignado | Mensal |
+| **SKU-104** | Óleo Lubrificante | **AY** | 14 un | 15 un | ⚠️ **EMITIR ORDEM COMPRA** | 16 un | Contrato Guarda-Chuva | Mensal |
+
+---
+
+### 💡 Regras de Negócio Implementadas no Algoritmo
+
+* **Gatilhos Automáticos de Compra:** O algoritmo compara continuamente o saldo físico com o Ponto de Pedido (ROP) e aciona o alerta de ruptura quando o saldo atinge o Estoque de Segurança.
+* **Cálculo da Ordem Sugerida:** Elimina o cálculo manual calculando automaticamente a quantidade exata para reabastecimento ideal: $\text{Qtd Sugerida} = (\text{ROP} \times 2) - \text{Estoque Atual}$.
+* **Governança por Criticidade:** 
+  * Itens de alta criticidade (**Matriz Z**) acionam sugestão de **Contrato VMI (Vendor Managed Inventory)** com estoque consignado para garantir SLA de entrega em até 5 dias.
+  * Frequência de revisão dos parâmetros de estoque definida pelo valor financeiro (Classe A = Mensal | Classe B = Trimestral | Classe C = Semestral).
+---
+
 ## 🛠️ Tecnologias e Ferramentas Utilizadas
 * **Python (Pandas, NumPy, Matplotlib, Seaborn):** Modelagem estocástica do estoque de segurança, cálculo de curva ABC/XYZ e visualizações.
 * **Google Sheets:** Coleta e estruturação da base de dados MRO.
