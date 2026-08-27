@@ -1,0 +1,5 @@
+SKU,Item,Matriz,Est. Atual,ROP,Status de Alerta,Qtd. Sugerida,Estratégia de Fornecedor,Revisão
+SKU-103,Eixo Transmissão,AZ,2,3,⚠️ EMITIR ORDEM,4 un,Contrato VMI / Consignado,Mensal
+SKU-105,Sensor Vibração,BZ,1,2,🚨 RISCO RUPTURA,3 un,Contrato VMI / Consignado,Trimestral
+SKU-101,Anel Vedação,CX,30,36,⚠️ EMITIR ORDEM,42 un,Compra por Lote,Semestral
+SKU-106,Porcas/Parafusos,CX,90,104,⚠️ EMITIR ORDEM,118 un,Compra por Lote,Semestral
