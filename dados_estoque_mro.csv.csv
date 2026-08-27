@@ -1,0 +1,9 @@
+Codigo_SKU,Descricao_Item,Consumo_Anual_Unid,Custo_Unitario_R$,Lead_Time_Dias,Criticidade_Operacional
+SKU-101,Anel de Vedação Viton O-Ring,1200,15.00,7,Baixa
+SKU-102,"Válvula Esfera Flangeada 4""",45,4800.00,45,Alta
+SKU-103,Eixo de Transmissão Inox,12,18500.00,60,Alta
+SKU-104,Óleo Lubrificante Sintético 20L,350,420.00,10,Média
+SKU-105,Sensor de Tremor de Vibração,8,9200.00,30,Alta
+SKU-106,Conjunto de Porcas e Parafusos Inox,5000,2.50,5,Baixa
+SKU-107,Filtro Coalescente de Alta Pressão,180,650.00,15,Média
+SKU-108,Placa de Circuito para CLP,5,12400.00,40,Alta
